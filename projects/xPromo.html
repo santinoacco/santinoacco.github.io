@@ -35,40 +35,66 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Convolutional Neural Network for photon identification</a></h2>
+										<h2><a href="#">Cross Promotion cost estimation project</a></h2>
 										<p>
-											Implementation of a DNN architecture to solve a binary classification.
+											Cost estimation tool powered by Python & hosted in Azure Databricks.
+											Reduced the risk uncertainty by 90% and estimated the cost based on retention and monetization metrics.
 										</p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">Jun 2019 - Jul 2022</time>
-										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/CERN_logo.png" alt="" /></a>
+										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/wls_logo.png" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span>
+								<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
 								<p>
-									This project encompasses the development of a Convolutional Neural Network framework,
-									the build of the data pipeline,
-									its deployment and the statistical consistency to identify photons.
-									It began as my Master Thesis project and it later evolved to become part of my PhD,
-									due to the great potential the ATLAS team saw on it.
+									<!-- Motivation -->
+									A Cross-Promotion is a particular case of a digital publishing campaign that involves two products (typically) owned by the same company.
+									The goal of this campaign is to leverage the strength of the better product to grow (or improve) some aspect of the other,
+									hence the stronger product acts as a Publisher hosting the ads for the other product.
+									The latter is known as the Advertiser.
+									If the cost of taken by the publisher to display the adds of the advertiser is below the expected improvement gained on the advertiser side,
+									then the campaign is said to be successful.
+									Optimizing this kind of campaigns presents a great challenge since one has to account for the cost taken by the publisher,
+									the predicted gain of the advertiser,
+									as well as the underlying relationship between the two agents.
+									This project aimed to estimate with high precision the cost taken by publisher,
+									which was selected to be Sniper3D.
+									As a result,
+									a tool able to estimate the cost with 3% uncertainty on the retention metric & 10% uncertainty on the monetization metric,
+									was deployed in the shape of a Python powered library.
 								</p>
 								<p>
-									The task of correctly identifying photons from events,
-									plays a fundamental role for the collaboration since photons are one of the main objects used in all searches (analysis) directly or indirectly across every experiment.
-									So far, the obtained results are astonishing when compared to previous implementations,
-									getting an overall over 20% improvement.</br>
-									The full framework has been developed using C++, Python, Keras and TensorFlow.
-									<!--Since it's a quite complex project and the source code won't be available for people outside the collaboration,-->
-									<!--I had added a set of slides to showcase the project.-->
+									The setup was layed as follows.
+									As mention above,
+									the Publisher agent was chosen to be the Sniper3D for its robustness over the years and well understood dynamics;
+									for the Advertiser agent the chosen game was WarMachines.
+									We established a constraint assuming that the interaction between the agents was weak enough to be discarded,
+									in other words we assumed that the underlying relationship between the Publisher game and the Advertiser game didn't impact the cost estimation on the chosen metrics.
+									In addition,
+									since we focused only on the Publisher side we restricted ourselves to computing the cost based solely on the Publisher contribution.
+								</p>
+								<p>
+									The solution to the cost estimation,
+									and packaged into the python tool,
+									was essentially a collection of control experiments (A/B tests) for the retention and monetization metrics.
+									For these given metrics we could look at their distributions and test on different groups the simulated impact of the ads.
+									Thus we could measure for different thresholds the tolerance and variance of the causal impact.
+									As a result we showed and computed that we were able to estimate a causal fluctuation of 3% (10%) for the retention (monetization) metric,
+									with a C.I. level of 90%.
+									Estimating the final cost was then rather straight forward since we only needed to multiply this difference with the predicted average revenue of the corresponding sample.
+								</p>
+								<p>
+									The tech stack used to carry out the analysis and share the results involved:
+									SciPy library, Pandas library, Numpy library, Matplotlib library, PySpark and DataBricks dashboards.
 								</p>
 								<footer>
-									<ul class="stats">
-										<li><a href="#">Slides</a></li>
-										<li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li>
+									<!-- <ul class="stats"> -->
+										<!-- <li><a href="#">Slides</a></li> -->
+										<!-- <li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li> -->
 										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
 										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
-									</ul>
+									<!-- </ul> -->
 								</footer>
 							</article>
 
@@ -77,7 +103,7 @@
 				<!-- Footer -->
 					<section id="footer">
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-youtube"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>

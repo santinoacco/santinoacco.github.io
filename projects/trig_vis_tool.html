@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>CNN photon Id project</title>
+		<title>Trigger Monitoring Visualization Tool</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -35,9 +35,10 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Convolutional Neural Network for photon identification</a></h2>
+										<h2><a href="#">Trigger Monitoring Visualization Tool</a></h2>
 										<p>
-											Implementation of a DNN architecture to solve a binary classification.
+											A visualization tool with dashboarding capabilities to monitor the Trigger performance,
+											powered by Jupyter notebooks, Python packaged and integrated in the cloud.
 										</p>
 									</div>
 									<div class="meta">
@@ -45,27 +46,28 @@
 										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/CERN_logo.png" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span>
+								<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
 								<p>
-									This project encompasses the development of a Convolutional Neural Network framework,
-									the build of the data pipeline,
-									its deployment and the statistical consistency to identify photons.
-									It began as my Master Thesis project and it later evolved to become part of my PhD,
-									due to the great potential the ATLAS team saw on it.
+									The Trigger Team is responsible for the early & fast selection of events in the detector,
+									thus its efficiency is crucial to store high quality events for offline treatment.
+									This Tool aimed to check the performance aspects of changes in the Trigger Software between releases.
 								</p>
 								<p>
-									The task of correctly identifying photons from events,
-									plays a fundamental role for the collaboration since photons are one of the main objects used in all searches (analysis) directly or indirectly across every experiment.
-									So far, the obtained results are astonishing when compared to previous implementations,
-									getting an overall over 20% improvement.</br>
-									The full framework has been developed using C++, Python, Keras and TensorFlow.
-									<!--Since it's a quite complex project and the source code won't be available for people outside the collaboration,-->
-									<!--I had added a set of slides to showcase the project.-->
+									<!-- Implementation -->
+									ATLAS has a custom framework and cloud service which has support for Jupyter-Notebooks like scripts.
+									I developed a Python package with tailored methods for interactive Search & Visualization on the notebooks,
+									using the cloud access to the database.	
+								</p>
+								<p>
+									<!-- Resulst -->
+									As a result it allowed to quickly & easily explore the content of the DB,
+									monitor the key aspects (metrics) of the Trigger performance: efficiency & resolution;
+									as well as being readily available to distribute among teams.
 								</p>
 								<footer>
 									<ul class="stats">
 										<li><a href="#">Slides</a></li>
-										<li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li>
+										<li><a href="#" class="icon brands fa-github">GitHub Repo</span></a></li>
 										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
 										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
 									</ul>
