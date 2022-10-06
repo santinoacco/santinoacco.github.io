@@ -37,7 +37,10 @@
 									<div class="title">
 										<h2><a href="#">Cost Per Action optimization campaigns</a></h2>
 										<p>
-											... summary here ...
+											Experimental framework to create, deploy, monitor & optimize 
+											digital marketing campaigns;
+											powered by Python, solid statistical framework,
+											enhanced by Machine Learning methods & clear interactive visualizations tools.
 										</p>
 									</div>
 									<div class="meta">
@@ -71,9 +74,7 @@
 								<p>
 									<!-- %1st Stage details -->
 									The definition of success for the first stage meant to overcome an overwhelming noisy search of possible events for each game,
-									since...
-									(we want events that are highly correlated to conversion)
-									
+									since initially we didn't know what are the best events in the game to target users that are likely to make purchases.
 									Although the data is structured in tables which we have great control on,
 									the space of possibilities is so large that a brute-force approach was impossible (impractical) for the time cost it would imply.
 									Two tools where provided and deployed to the relevant teams to achieve the task,
@@ -83,7 +84,7 @@
 									The second tool combined a set of statistical methods to reduce the size of the event search space,
 									starting with a filtering funnel based on business rules and data quality loose criteria,
 									we then look at the discrimination power of the events between to group of players the NP (non-payers) and the HP (high-payers).
-									The filtering funnel eventually gave place to a Decision Tree model,
+									The filtering funnel eventually gave place to a Decision Tree based model,
 									once our understanding of the metrics was deeper.
 									The outcome of this first stage was a small (the order of 10) set of event candidates to be implemented as the action in the campaign.
 								</p>
@@ -107,32 +108,26 @@
 										  <td>Fraction of users that converted (made a purchase) with respect to the set scope.</td>
 										</tr>
 										<tr>
-										  <td>Payer Coverage</td>
-										  <td>$${p(conv|ev) = \frac{N_{conv,ev}}{N_{conv}}|_{scope}}$$</td>
-										  <td>Fraction of users that converted.</td>
-										</tr>
-										<tr>
 										  <td>Conversion Significance</td>
+										  <td>$${p(conv|ev) = \frac{N_{conv,ev}}{N_{conv}}|_{scope}}$$</td>
+										  <td>Fraction of users that converted given that they triggered the event.</td>
+										</tr>
+										<tr>
+										  <td>Payer Coverage</td>
 										  <td>$${p(ev|conv) = \frac{N_{conv,ev}}{N_{ev}}|_{scope}}$$</td>
-										  <td>Fraction of users that triggered.</td>
+										  <td>Fraction of users that triggered the event given that they converted.</td>
 										</tr>
-										<tr>
+										<!-- <tr>
 										  <td>Value per Install</td>
-										  <td>$${VpI = \frac{N_{conv,ev}}{N_{ev}}|_{scope}}$$</td>
+										  <td>$${VpI = \frac{}{}|_{scope}}$$</td>
 										  <td>Fraction of users that triggered.</td>
-										</tr>
-										<tr>
+										</tr> -->
+										<!-- <tr>
 										  <td>Value per Trigger</td>
 										  <td>$${VpT = \frac{N_{conv,ev}}{N_{ev}}|_{scope}}$$</td>
 										  <td>Fraction of users that triggered.</td>
-										</tr>
+										</tr> -->
 									</table> 
-									<!-- p(ev) (trigger rate)
-									p(conv) (conversion rate)
-									p(conv|ev) (conversion significance)
-									p(ev|conv) (payer coverage)
-									VpI (value per Install)
-									VpT (value per Trigger) -->
 									I was able to show that our key metrics were related by the Bayes Rule,
 									like so:
 									$${ p(ev|conv) = \frac{p(conv|ev)p(ev)}{p(conv)} }$$
@@ -140,13 +135,14 @@
 									With all this elements we built a pipeline to measure and display the expected performance in terms of those metrics for each event-candidate.
 									As a result we can select the events that target the users that are most likely to convert and increase the revenue.
 									With the inclusion of uncertainties it became clear that events displayed a cluster behavior,
-									thus we added Machine Learning Clustering techniques,
-									in particular k-medians.
+									thus we added a Machine Learning Clustering technique;
+									a k-medians model to extend the clustering to account for a higher number of features.
 								</p>
 								<p>
 									<!-- 3rd Stage details -->
 									Having selected the events to configure the CPA campaign the next step is to send the AdNet the information to provide the users we target.
 									This will mark the beginning of the deployment stage since once the information (signal) is sent we can launch the campaigns.
+									By "sending the signal (or information)" we mean to update the AdNet when an event of interest (target) happened inside the game.
 									Sending the signal or information means to update the AdNet when an event of interest (target) happened inside the game.
 									To achieve this task we sended everyday the previous set of users that trigger the event through the AdNets API,
 									using a pipeline we developed for that particular purpose and was integrated in Airflow.
@@ -158,10 +154,14 @@
 									<!-- 4th Stage details -->
 									After the campaign was in production for two weeks we started controlling and comparing its performance to the expected values computed at the 2nd stage.
 									In this instance we gathered the prior metrics into what we called the optimization metrics,
-									we added extra value metrics such as: bid, spend and projected revenue;
+									we added extra value metrics such as:
+									bid, spend and projected revenue;
 									and we included volume metrics such as number of installs and number of trigger events.
 									We packaged this analysis into a pipeline for us and the Media Buyers to easily access it.
-									As a result we were able to correct the course of the campaigns to make them successful in terms of increasing the revenue and the install volume.
+									<!-- As a result we were able to correct the course of the campaigns to make them successful in terms of increasing the revenue and the install volume. -->
+									As a result we deployed more than 20 campaigns across 4 different games (Zooba, War Machine, Sniper 3D & Tennis Clash) and 2 different AdNets (Google & Facebook),
+									within 3 months of development.
+									<b>We grew the revenue over 120k u$d thank to these campaigns and we brought more than 6k new users to these games</b>.
 								</p>
 									<!-- % Roles & Responsibilities  -->
 								<footer>
