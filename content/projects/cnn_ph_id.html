@@ -66,12 +66,14 @@
 									in this case we are concerned on mapping raw data to high level classes that we identify as particles.
 									The raw data is for us the signal deposited in the detector by the particles after the beam interaction,
 									which can be measured by position variables (features), magnetic moment, and energy deposited.
+									<span class="image left"><img src="../images/HLT_CNN_Model.png" alt="" /></span>
 									The current baseline to identify particles takes these raw features and builds higher level features called ShowerShapes Variables.
 									In this project approach we remove the need for these variables,
 									instead we input the raw energy deposits as images to the classifier.
 								</p>
 								<p>
 									<!-- Project structure -->
+									<span class="image right"><img src="../images/full_outROC.png" alt="" /></span>
 									The project outcome was a classifier tool for photons that is deployed using the ONNX format for the CNN model.
 									Objects in ATLAS are stored in a NoSQL file format that has a directory structure of custom objects representing an event.
 									The tool is fed with this files,
@@ -92,7 +94,7 @@
 									<!--I had added a set of slides to showcase the project.-->
 								<footer>
 									<ul class="stats">
-										<li><a href="../content/slides/CNN_photonID.pdf">Slides</a></li>
+										<li><a href="../../content/slides/CNN_photonID.pdf">Slides</a></li>
 										<li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li>
 										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
 										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
