@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>General ML model for Anomalous Spectrums detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html" class="icon solid fa-home">Home</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="https://www.linkedin.com/in/santiago-noacco" class="icon brands fa-linkedin">LinkedIn</a></li>
+								<li><a href="https://www.youtube.com/channel/UC1phDzW2CjKzVWmx-8NgyUQ"class="icon brands fa-youtube">Youtube</a></li>
+								<li><a href="https://github.com/santinoacco" class="icon brands fa-github">GitHub</a></li>
+							</ul>
+						</nav>
+					</header>
+
+			<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">Convolutional Neural Network for photon identification</a></h2>
+										<p>
+											Implementation of a DNN architecture to solve a binary classification.
+										</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">Jun 2019 - Jul 2022</time>
+										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/CERN_logo.png" alt="" /></a>
+									</div>
+								</header>
+								<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
+								<p>
+									This project encompasses the development of a Convolutional Neural Network framework,
+									the build of the data pipeline,
+									its deployment and the statistical consistency to identify photons.
+									It began as my Master Thesis project and,
+									due to the great potential the ATLAS team saw on it,
+									it later evolved to become part of my PhD.
+								</p>
+								<p>
+									The task of correctly identifying photons from events,
+									plays a fundamental role for the collaboration since photons are one of the main objects used in all searches (analysis) directly or indirectly across every experiment.
+									So far, the obtained results are astonishing when compared to previous implementations,
+									getting an overall over 20% improvement.
+								</p>
+								<p>
+									<!-- Motivation -->
+									The problem of identifying objects in the experiment can be frame as a typical Data Mining one,
+									in this case we are concerned on mapping raw data to high level classes that we identify as particles.
+									The raw data is for us the signal deposited in the detector by the particles after the beam interaction,
+									which can be measured by position variables (features), magnetic moment, and energy deposited.
+									The current baseline to identify particles takes these raw features and builds higher level features called ShowerShapes Variables.
+									In this project approach we remove the need for these variables,
+									instead we input the raw energy deposits as images to the classifier.
+								</p>
+								<p>
+									<!-- Project structure -->
+									The project outcome was a classifier tool for photons that is deployed using the ONNX format for the CNN model.
+									Objects in ATLAS are stored in a NoSQL file format that has a directory structure of custom objects representing an event.
+									The tool is fed with this files,
+									from where it reads the raw features and processes them to input a heatmap (energy distribution) to the CNN.
+									The model was fully developed using TensorFlow and Keras in a custom and dynamic manner.
+								</p>
+								<p>
+									<!-- Result -->
+									Both the Signal Efficiency (Recall) and Background Rejection show remarkable improvements with respect to the baseline tool.
+									In particular we showed for a set Background Rejection a 20% improvement in the Signal Efficiency against the baseline all the coordinate range.
+								</p>
+								<p>
+									<!-- Tech Stack -->
+									The full framework has been developed using C++, Python, Keras & TensorFlow.
+									Some of the key Python libraries used are: PyRoot, uproot, scikit-hep, Matplotlib, Pandas, Numpy & Numba.
+								</p>
+									<!--Since it's a quite complex project and the source code won't be available for people outside the collaboration,-->
+									<!--I had added a set of slides to showcase the project.-->
+								<footer>
+									<ul class="stats">
+										<li><a href="../content/slides/CNN_photonID.pdf">Slides</a></li>
+										<li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li>
+										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-youtube"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>. </p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
