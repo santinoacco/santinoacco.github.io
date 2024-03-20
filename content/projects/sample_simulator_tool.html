@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>General ML model for Anomalous Spectrum detection</title>
+		<title>Synthetic Sample Simulator Engine</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -35,43 +35,60 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">MA'AT model - the god of judgement</a></h2>
+										<h2><a href="#">Synthetic Sample Simulator Engine</a></h2>
 										<p>
-											Collection of Stacked ML models to detect anomalous spectra in industrial machinery signals for predictive maintenance.
+											In-house engine (python-based) to synthesize signal samples from industrial machines.
 										</p>
 									</div>
 									<div class="meta">
-										<time class="published" datetime="2015-11-01">Jun 2023 - Dic 2023</time>
-										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/CERN_logo.png" alt="" /></a>
+										<time class="published" datetime="2015-11-01">Feb 2024 - Present</time>
+										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/TRACTIAN_logo.png" alt="" /></a>
 									</div>
 								</header>
 								<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
 								<p>
-									<!-- This project encompasses the development of a Convolutional Neural Network framework,
-									the build of the data pipeline,
-									its deployment and the statistical consistency to identify photons.
-									It began as my Master Thesis project and,
-									due to the great potential the ATLAS team saw on it,
-									it later evolved to become part of my PhD. -->
-								</p>
-								<p>
-									<!-- The task of correctly identifying photons from events,
-									plays a fundamental role for the collaboration since photons are one of the main objects used in all searches (analysis) directly or indirectly across every experiment.
-									So far, the obtained results are astonishing when compared to previous implementations,
-									getting an overall over 20% improvement. -->
+									<!-- Intro -->
+									This project encompasses the development & deployment of a Simulator Engine,
+									encapsulated in a Python package.
+									The goal of the Simulator is to generate synthetic samples that resemble the signatures measured by Tractian sensor,
+									for as many different types of assets in as many possible operating scenarios,
+									health conditions and external constrains.
 								</p>
 								<p>
 									<!-- Motivation -->
-									<!-- The problem of identifying objects in the experiment can be frame as a typical Data Mining one,
-									in this case we are concerned on mapping raw data to high level classes that we identify as particles.
-									The raw data is for us the signal deposited in the detector by the particles after the beam interaction,
-									which can be measured by position variables (features), magnetic moment, and energy deposited.
-									The current baseline to identify particles takes these raw features and builds higher level features called ShowerShapes Variables.
-									In this project approach we remove the need for these variables,
-									instead we input the raw energy deposits as images to the classifier. -->
+									Having an easy-to-use, trustful, feature-rich, extensible and very flexible Tool capable of producing labeled (synthetic) datasets,
+									opens a world of opportunities for Data Scientist & Machine Learning Engineering Teams.
+									The operating conditions of some assets is so unusual (yet crucial) that it is very hard to collect data to train ML models,
+									with a Tool like this one it is easy to overcome this issue.
+									Among other use-cases, 
+									it enables to build speed up development since it reduces the effort & time taken to find a training data-set,
+									and a common data-set can be reused to define performance baselines.
+									It can create data-sets for testing environments and to build virtual experiments.
 								</p>
 								<p>
 									<!-- Project structure -->
+									This project faced me with great challenges, 
+									both technical and of coordination.
+									As the project leader with the support and availability of other 7 Data Scientist,
+									I structured the development & deliverable cycle into 3 initial phases.
+									In the first stage, 
+									which took about a month, 
+									consisted on drafting the package (tool) structure,
+									validating the approach,
+									creating the beta-release for testing & feedback assessment,
+									and setting the success metrics and goals of the tool.
+									The second stage was aimed to increase the power, coverage and flexibility of the tool.
+									For that purpose it was necessary to onboard 4 of the Data Scientist into the development cycle of the package.
+									With their contributions and added fixes & improvements we were able to release version 1 in record time,
+									just over a month.
+									The third phase has a period of consolidation, feedback collection and market spread.
+									We are continuously increasing the power of the tool as the features are required.
+									
+									Technically the Tool has two components:
+									a collection of Seeds,
+									as a collection of files;
+									and the Engine packaged as a python package.
+
 									<!-- The project outcome was a classifier tool for photons that is deployed using the ONNX format for the CNN model.
 									Objects in ATLAS are stored in a NoSQL file format that has a directory structure of custom objects representing an event.
 									The tool is fed with this files,
@@ -92,7 +109,7 @@
 									<!--I had added a set of slides to showcase the project.-->
 								<footer>
 									<ul class="stats">
-										<!-- <li><a href="../content/slides/CNN_photonID.pdf">Slides</a></li> -->
+										<li><a href="../slides/Prometheus.pdf">Slides</a></li>
 										<!-- <li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li> -->
 										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
 										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
