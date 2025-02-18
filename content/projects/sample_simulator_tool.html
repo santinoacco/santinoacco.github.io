@@ -14,131 +14,128 @@
 	<body class="single is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="../../index.html" class="icon solid fa-home">Home</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="https://www.linkedin.com/in/santiago-noacco" class="icon brands fa-linkedin">LinkedIn</a></li>
-								<li><a href="https://www.youtube.com/channel/UC1phDzW2CjKzVWmx-8NgyUQ"class="icon brands fa-youtube">Youtube</a></li>
-								<li><a href="https://github.com/santinoacco" class="icon brands fa-github">GitHub</a></li>
-							</ul>
-						</nav>
-					</header>
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="../../index.html" class="icon solid fa-home"></a></h1>
+				<nav class="links">
+				<ul>
+					<li><a href="https://www.linkedin.com/in/santiago-noacco" class="icon brands fa-linkedin">LinkedIn</a></li>
+					<li><a href="https://www.youtube.com/channel/UC1phDzW2CjKzVWmx-8NgyUQ"class="icon brands fa-youtube">Youtube</a></li>
+					<li><a href="https://github.com/santinoacco" class="icon brands fa-github">GitHub</a></li>
+				</ul>
+				</nav>
+			</header>
 
 			<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Synthetic Sample Simulator Engine</a></h2>
-										<p>
-											In-house engine (python-based) to synthesize signal samples from industrial machines.
-										</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2015-11-01">Feb 2024 - Present</time>
-										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/TRACTIAN_logo.png" alt="" /></a>
-									</div>
-								</header>
-								<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
-								<p>
-									<!-- Intro -->
-									This project encompasses the development & deployment of a Simulator Engine,
-									encapsulated in a Python package.
-									The goal of the Simulator is to generate synthetic samples that resemble the signatures measured by Tractian sensor,
-									for as many different types of assets in as many possible operating scenarios,
-									health conditions and external constrains.
-								</p>
-								<p>
-									<!-- Motivation -->
-									Having an easy-to-use, trustful, feature-rich, extensible and very flexible Tool capable of producing labeled (synthetic) datasets,
-									opens a world of opportunities for Data Scientist & Machine Learning Engineering Teams.
-									The operating conditions of some assets is so unusual (yet crucial) that it is very hard to collect data to train ML models,
-									with a Tool like this one it is easy to overcome this issue.
-									Among other use-cases, 
-									it enables to build speed up development since it reduces the effort & time taken to find a training data-set,
-									and a common data-set can be reused to define performance baselines.
-									It can create data-sets for testing environments and to build virtual experiments.
-								</p>
-								<p>
-									<!-- Project structure -->
-									This project faced me with great challenges, 
-									both technical and of coordination.
-									As the project leader with the support and availability of other 7 Data Scientist,
-									I structured the development & deliverable cycle into 3 initial phases.
-									In the first stage, 
-									which took about a month, 
-									consisted on drafting the package (tool) structure,
-									validating the approach,
-									creating the beta-release for testing & feedback assessment,
-									and setting the success metrics and goals of the tool.
-									The second stage was aimed to increase the power, coverage and flexibility of the tool.
-									For that purpose it was necessary to onboard 4 of the Data Scientist into the development cycle of the package.
-									With their contributions and added fixes & improvements we were able to release version 1 in record time,
-									just over a month.
-									The third phase has a period of consolidation, feedback collection and market spread.
-									We are continuously increasing the power of the tool as the features are required.
-									
-									Technically the Tool has two components:
-									a collection of Seeds,
-									as a collection of files;
-									and the Engine packaged as a python package.
-
-									<!-- The project outcome was a classifier tool for photons that is deployed using the ONNX format for the CNN model.
-									Objects in ATLAS are stored in a NoSQL file format that has a directory structure of custom objects representing an event.
-									The tool is fed with this files,
-									from where it reads the raw features and processes them to input a heatmap (energy distribution) to the CNN.
-									The model was fully developed using TensorFlow and Keras in a custom and dynamic manner. -->
-								</p>
-								<p>
-									<!-- Result -->
-									<!-- Both the Signal Efficiency (Recall) and Background Rejection show remarkable improvements with respect to the baseline tool.
-									In particular we showed for a set Background Rejection a 20% improvement in the Signal Efficiency against the baseline all the coordinate range. -->
-								</p>
-								<p>
-									<!-- Tech Stack -->
-									<!-- The full framework has been developed using C++, Python, Keras & TensorFlow.
-									Some of the key Python libraries used are: PyRoot, uproot, scikit-hep, Matplotlib, Pandas, Numpy & Numba. -->
-								</p>
-									<!--Since it's a quite complex project and the source code won't be available for people outside the collaboration,-->
-									<!--I had added a set of slides to showcase the project.-->
-								<footer>
-									<ul class="stats">
-										<li><a href="../slides/Prometheus.pdf">Slides</a></li>
-										<!-- <li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li> -->
-										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
-									</ul>
-								</footer>
-							</article>
-
+			<div id="main">
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">Synthetic Sample Simulator Engine</a></h2>
+						<p>
+							In-house engine (python-based) to synthesize signal samples from industrial machines.
+						</p>
 					</div>
+					<div class="meta">
+						<time class="published" datetime="2015-11-01">Feb 2024 - Present</time>
+						<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/TRACTIAN_logo.png" alt="" /></a>
+					</div>
+				</header>
+				<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
+				<p>
+					<!-- Intro -->
+					This project encompasses the development & deployment of a Simulator Engine,
+					encapsulated in a Python package.
+					The goal of the Simulator is to generate synthetic samples that resemble the signatures measured by Tractian sensor,
+					for as many different types of assets in as many possible operating scenarios,
+					health conditions and external constrains.
+				</p>
+				<p>
+					<!-- Motivation -->
+					Having an easy-to-use, trustful, feature-rich, extensible and very flexible Tool capable of producing labeled (synthetic) datasets,
+					opens a world of opportunities for Data Scientist & Machine Learning Engineering Teams.
+					The operating conditions of some assets is so unusual (yet crucial) that it is very hard to collect data to train ML models,
+					with a Tool like this one it is easy to overcome this issue.
+					Among other use-cases, 
+					it enables to build speed up development since it reduces the effort & time taken to find a training data-set,
+					and a common data-set can be reused to define performance baselines.
+					It can create data-sets for testing environments and to build virtual experiments.
+				</p>
+				<p>
+					<!-- Project structure -->
+					This project faced me with great challenges, 
+					both technical and of coordination.
+					As the project leader with the support and availability of other 7 Data Scientist,
+					I structured the development & deliverable cycle into 3 initial phases.
+					In the first stage, 
+					which took about a month, 
+					consisted on drafting the package (tool) structure,
+					validating the approach,
+					creating the beta-release for testing & feedback assessment,
+					and setting the success metrics and goals of the tool.
+					The second stage was aimed to increase the power, coverage and flexibility of the tool.
+					For that purpose it was necessary to onboard 4 of the Data Scientist into the development cycle of the package.
+					With their contributions and added fixes & improvements we were able to release version 1 in record time,
+					just over a month.
+					The third phase has a period of consolidation, feedback collection and market spread.
+					We are continuously increasing the power of the tool as the features are required.
+					
+					Technically the Tool has two components:
+					a collection of Seeds,
+					as a collection of files;
+					and the Engine packaged as a python package.
 
-				<!-- Footer -->
-					<section id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-youtube"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>. </p>
-					</section>
-
+					<!-- The project outcome was a classifier tool for photons that is deployed using the ONNX format for the CNN model.
+					Objects in ATLAS are stored in a NoSQL file format that has a directory structure of custom objects representing an event.
+					The tool is fed with this files,
+					from where it reads the raw features and processes them to input a heatmap (energy distribution) to the CNN.
+					The model was fully developed using TensorFlow and Keras in a custom and dynamic manner. -->
+				</p>
+				<p>
+					<!-- Result -->
+					<!-- Both the Signal Efficiency (Recall) and Background Rejection show remarkable improvements with respect to the baseline tool.
+					In particular we showed for a set Background Rejection a 20% improvement in the Signal Efficiency against the baseline all the coordinate range. -->
+				</p>
+				<p>
+					<!-- Tech Stack -->
+					<!-- The full framework has been developed using C++, Python, Keras & TensorFlow.
+					Some of the key Python libraries used are: PyRoot, uproot, scikit-hep, Matplotlib, Pandas, Numpy & Numba. -->
+				</p>
+					<!--Since it's a quite complex project and the source code won't be available for people outside the collaboration,-->
+					<!--I had added a set of slides to showcase the project.-->
+				<footer>
+					<ul class="stats">
+						<li><a href="../slides/Prometheus.pdf">Slides</a></li>
+						<!-- <li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li> -->
+						<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li> -->
+					</ul>
+				</footer>
+			</article>
 			</div>
 
+			<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-youtube"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+					<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright">&copy; All rights reserved. </p>
+			</section>
+		</div>
+
 		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
