@@ -14,91 +14,97 @@
 	<body class="single is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="../../index.html" class="icon solid fa-home">Home</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="https://www.linkedin.com/in/santiago-noacco" class="icon brands fa-linkedin">LinkedIn</a></li>
-								<li><a href="https://www.youtube.com/channel/UC1phDzW2CjKzVWmx-8NgyUQ"class="icon brands fa-youtube">Youtube</a></li>
-								<li><a href="https://github.com/santinoacco" class="icon brands fa-github">GitHub</a></li>
-							</ul>
-						</nav>
-					</header>
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="../../index.html" class="icon solid fa-home"></a></h1>
+				<nav class="links">
+					<ul>
+						<li><a href="https://www.linkedin.com/in/santiago-noacco" class="icon brands fa-linkedin">LinkedIn</a></li>
+						<li><a href="https://www.youtube.com/channel/UC1phDzW2CjKzVWmx-8NgyUQ"class="icon brands fa-youtube">Youtube</a></li>
+						<li><a href="https://github.com/santinoacco" class="icon brands fa-github">GitHub</a></li>
+					</ul>
+				</nav>
+			</header>
 
 			<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Cross Promotion cost estimation project</a></h2>
-										<p>
-											Cost estimation tool powered by Python & hosted in Azure Databricks.
-											Reduced the risk uncertainty by 90% and estimated the cost based on retention and monetization metrics.
-										</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2015-11-01">Jun 2019 - Jul 2022</time>
-										<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/wls_logo.png" alt="" /></a>
-									</div>
-								</header>
-								<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
-								<p>
-									<!-- Motivation -->
-									A Cross-Promotion is a particular case of a digital publishing campaign that involves two products (typically) owned by the same company.
-									The goal of this campaign is to leverage the strength of the better product to grow (or improve) some aspect of the other,
-									hence the stronger product acts as a Publisher hosting the ads for the other product.
-									The latter is known as the Advertiser.
-									If the cost of taken by the publisher to display the adds of the advertiser is below the expected improvement gained on the advertiser side,
-									then the campaign is said to be successful.
-									Optimizing this kind of campaigns presents a great challenge since one has to account for the cost taken by the publisher,
-									the predicted gain of the advertiser,
-									as well as the underlying relationship between the two agents.
-									This project aimed to estimate with high precision the cost taken by publisher,
-									which was selected to be Sniper3D.
-									As a result,
-									a tool able to estimate the cost with 3% uncertainty on the retention metric & 10% uncertainty on the monetization metric,
-									was deployed in the shape of a Python powered library.
-								</p>
-								<p>
-									The setup was layed as follows.
-									As mention above,
-									the Publisher agent was chosen to be the Sniper3D for its robustness over the years and well understood dynamics;
-									for the Advertiser agent the chosen game was WarMachines.
-									We established a constraint assuming that the interaction between the agents was weak enough to be discarded,
-									in other words we assumed that the underlying relationship between the Publisher game and the Advertiser game didn't impact the cost estimation on the chosen metrics.
-									In addition,
-									since we focused only on the Publisher side we restricted ourselves to computing the cost based solely on the Publisher contribution.
-								</p>
-								<p>
-									The solution to the cost estimation,
-									and packaged into the python tool,
-									was essentially a collection of control experiments (A/B tests) for the retention and monetization metrics.
-									For these given metrics we could look at their distributions and test on different groups the simulated impact of the ads.
-									Thus we could measure for different thresholds the tolerance and variance of the causal impact.
-									As a result we showed and computed that we were able to estimate a causal fluctuation of 3% (10%) for the retention (monetization) metric,
-									with a C.I. level of 90%.
-									Estimating the final cost was then rather straight forward since we only needed to multiply this difference with the predicted average revenue of the corresponding sample.
-								</p>
-								<p>
-									The tech stack used to carry out the analysis and share the results involved:
-									SciPy library, Pandas library, Numpy library, Matplotlib library, PySpark and DataBricks dashboards.
-								</p>
-								<footer>
-									<!-- <ul class="stats"> -->
-										<!-- <li><a href="#">Slides</a></li> -->
-										<!-- <li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li> -->
-										<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li> -->
-									<!-- </ul> -->
-								</footer>
-							</article>
-
+			<div id="main">
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">Cross Promotion cost estimation project</a></h2>
+						<p>
+							Cost estimation tool powered by Python & hosted in Azure Databricks.
+							Reduced the risk uncertainty by 90% and estimated the cost based on retention and monetization metrics.
+						</p>
 					</div>
+					<div class="meta">
+						<time class="published" datetime="2015-11-01">Jun 2019 - Jul 2022</time>
+						<a href="#" class="author"><span class="name">Santiago Noacco</span><img src="../images/wls_logo.png" alt="" /></a>
+					</div>
+				</header>
+				<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
+				<h3>Some context ...</h3>
+				<p><!-- Motivation -->
+					A Cross-Promotion is a particular case of a digital publishing campaign that involves two products (typically) owned by the same company.
+					The goal of this campaign is to leverage the strength of the better product to grow (or improve) some aspect of the other,
+					hence the stronger product acts as a Publisher hosting the ads for the other product.
+					The latter is known as the Advertiser.
+					If the cost of taken by the publisher to display the adds of the advertiser is below the expected improvement gained on the advertiser side,
+					then the campaign is said to be successful.
+					Optimizing this kind of campaigns presents a great challenge since one has to account for the cost taken by the publisher,
+					the predicted gain of the advertiser,
+					as well as the underlying relationship between the two agents.
+				</p>
+				<p><!-- Goal -->
+					This project aimed to estimate with high precision the cost taken by publisher,
+					which was selected to be Sniper3D.
+					As a result,
+					a tool able to estimate the cost with 3% uncertainty on the retention metric & 10% uncertainty on the monetization metric,
+					was deployed in the shape of a Python powered library.
+				</p>
+				<br>
+				<h3>The solution</h3>
+				<p>
+					The setup was laid as follows.
+					Sniper3D was chosen as the Publisher for its robustness over the years and well understood dynamics;
+					as for the Advertiser agent the chosen game was WarMachines.
+					We established a constraint assuming that the interaction between the agents was weak enough to be discarded,
+					in other words we assumed that the underlying relationship between the Publisher game and the Advertiser game didn't impact the cost estimation on the chosen metrics.
+					In addition,
+					since we focused only on the Publisher side, 
+					we restricted ourselves to computing the cost based solely on the Publisher contribution.
+				</p>
+				<p>
+					The solution to the cost estimation,
+					packaged into the python tool,
+					was essentially a collection of control experiments (A/B tests) for the retention and monetization metrics.
+					For these given metrics we could look at their distributions and test on different groups the simulated impact of the ads.
+					Thus we could measure for different thresholds the tolerance and variance of the causal impact.
+					<b>
+					As a result we showed and computed that we were able to estimate a causal fluctuation of 3% (10%) for the retention (monetization) metric,
+					with a C.I. level of 90%.
+					</b>
+					Estimating the final cost was then rather straight forward since we only needed to multiply this difference with the predicted average revenue of the corresponding sample.
+				</p>
+				<p>
+					The tech stack used to carry out the analysis and share the results involved:
+					Pandas, PySpark & Numpy for data manipulation, 
+					SciPy as the backbone for the algorithms, 
+					Matplotlib and DataBricks for visualizations in dashboards.
+				</p>
+				<footer>
+					<!-- <ul class="stats"> -->
+						<!-- <li><a href="#">Slides</a></li> -->
+						<!-- <li><a href="https://github.com/santinoacco/Master-Thesis" class="icon brands fa-github">GitHub Repo</span></a></li> -->
+						<!-- <li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li> -->
+					<!-- </ul> -->
+				</footer>
+			</article>
+			</div>
 
 			<!-- Footer -->
 			<section id="footer">
