@@ -39,25 +39,93 @@
 					</div>
 				</header>
 				<!-- <span class="image featured"><img src="../images/PortadaProyecto_CNNPhID.jpg" alt="" /></span> -->
+				<h3>A complex challenge</h3>
 				<p>
-					<!-- Intro -->
-					 ...
+					The key output of the Data Department is wrapped in what we call the *insights*,
+					which in short are alerts to prevent failures or share important information.
+					In the rest of this article I will refer to those *insights* in a broad sense with all its dependencies as the 
+					<i><b>data product</b></i>;
+					and when we need to point specifically to the alerts as a single entity we will refer to it as <i>insights</i>.
 				</p>
 				<p>
-					Work In Progress ...
+          Improving the <i>data product</i> is a task that combines many aspects of the business,
+          the accessible resources and technical challenges;
+          thus it's no wonder that it usually involves a number of teams.
+          Unfortunately, at the time,
+          the Data Department lacked a systematic process to tackle this task, 
+          so as soon as I identified the magnitude and potential of this issue I focused on creating a framework to solve it,
+          which gave birth to this project.
+        </p>
+        <br>
+				<h3>An infrastructure for scale</h3>
+        <p>
+          <b>The solution</b>,
+          which took three quarters to be fully implemented,
+          <b>required the deployment of three infrastructure linked components and affected directly four teams </b>,
+          the <i>Data Science Research</i> (DSR) team,
+          since it's the owner of the development and maintenance of the backend machine-learning models.
+          The <i>Machine Learning Operations</i> (MLOps) team as owners of the service infrastructure who handles models load and execution.
+          The <i>Customer Support</i> (CS) team since it is the visible front face to the customer and first affected by the data-product results. 
+          And finally,
+          the <i>Products</i> team,
+          which oversees product quality, requirements and priorities,
+          especially from a business point of view.
+          It is easy to see how these teams might be involved,
+          the customer or the CS team identify an issue or a new hot requirement,
+          one that the Product team must fit into their plan while deliverying the most value and ensuring that both the DS and MLOps teams have the resources to achieve the goal.
+          In this chain of communication and priorities quite often misunderstandings and omissions lead to poor choises.
+          And that is exactly what this project aimed to fix.
 				</p>
 				<p>
 					<!-- Project structure -->
-					 ....
-
-					<!-- The project outcome was a classifier tool for photons that is deployed using the ONNX format for the CNN model.
-					Objects in ATLAS are stored in a NoSQL file format that has a directory structure of custom objects representing an event.
-					The tool is fed with this files,
-					from where it reads the raw features and processes them to input a heatmap (energy distribution) to the CNN.
-					The model was fully developed using TensorFlow and Keras in a custom and dynamic manner. -->
+					The infrastructure links three distinct components:
+          a <i>Customer Success Ticket Mining System</i> (CS-TMS),
+          whose goal is to extract information from the users, the CS-engineers and their interactions,
+          in a form that is both useful to make short-term decisions to Product team,
+          and to aid in adjusting the machine-learning model suit.
+					An <i>Insight Monitoring Toolkit</i> (IMT),
+          whose purpose is to analyze the internal and external quality of the delivered data-product in a wide, global sense. 
+          And last but not least,
+					a <i>Virtual Lab</i> (VL),
+          for evaluating the individual predictive performance of machine-learning models in an isolated environment.
+          The three on their own are powerful enough,
+          however when combined is when magic happens.
+          The CS-TMS allows to effectively identify the most crucial features to fix or develop based on the most important metric,
+          user feedback.
+          With those priorities set,
+          the IMT helps to figure out and understand which and what aspect of the insights should be address.
+          Then the VL allows the technical teams to find what model(s) in specific is responsible for issue (topic) and draft possible solutions accordingly.
 				</p>
-				<p>
-					<!-- Result -->
+        <details><summary>For the curious minds ...</summary>
+        <br>
+        <!-- <details><summary>Details of the components</summary> -->
+        <h4>Details of the components</h4>
+				<p> <!-- CS-TMS -->
+          The <i>CS-TMS</i> is essentially an ETL implementation that converts Slack Messages and Intercom tickets into actionable data for an analysis pipeline.
+          The CS engineers have different <i>tickets templates</i> for different issue scenarios,
+          which they can interact with as well as the data-scientist and machine-learning-engineers.
+          These tickets pack the most relevant information of the case,
+          which are stored in a MongoDB database and immediately help solve user issues. 
+          An analytics pipeline then runs every week, month and quarter creating metrics and plots
+          that the BI team and I analyze to extract valuable information.
+				</p>
+        <p><!-- IMT -->
+					The <i>IMT</i> contains a number of tools introduces to help on measuring the impact of the generated insights.
+          Among its content we find loggers, dashboards, pipelines and libraries,
+          that under the hood use latent knowledge of the infrastructure and business logic to evaluate the
+          quality of the insights.
+          It is not a BI tool because it is focus towards identifying the root cause of technical issues within
+          our internal infrastructure.
+        </p>
+        <p><!-- VL -->
+          The <i>VL</i> is a Python packaged library that enables the evaluation of machine-learning models,
+          whether they are classifiers, regressors or generators,
+          under development or production environment.
+          On top of that it supports two evaluation pipelines one for <i>fitting</i> and another for <i>predicting</i>,
+          with the capability of using as input multiple data-sources: <i>organic, synthetic, controlled, internal or external.</i> 
+          In some sense it can be seen as custom MLFlow tool, even though it doesn't use it in any way.
+				</p>
+        </details>
 				</p>
 				<p>
 					<!-- Tech Stack -->
