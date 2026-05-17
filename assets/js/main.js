@@ -92,4 +92,31 @@
 				$intro.prependTo($sidebar);
 			});
 
+	// Theme toggle.
+		var $themeToggle = $('#theme-toggle'),
+			$html = $('html');
+
+		function setTheme(theme) {
+			if (theme === 'dark') {
+				$html.attr('data-theme', 'dark');
+				$themeToggle.removeClass('fa-moon').addClass('fa-sun');
+			} else {
+				$html.removeAttr('data-theme');
+				$themeToggle.removeClass('fa-sun').addClass('fa-moon');
+			}
+			localStorage.setItem('theme', theme);
+		}
+
+		var savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			setTheme(savedTheme);
+		} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			setTheme('dark');
+		}
+
+		$themeToggle.on('click', function(e) {
+			e.preventDefault();
+			setTheme($html.attr('data-theme') ? 'light' : 'dark');
+		});
+
 })(jQuery);
